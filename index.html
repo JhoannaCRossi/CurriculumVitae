@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body{
+            background: #585c68;
+            font-size: 13px;
+            line-height: 22px;
+            color: #555;
+        }
+
+        .bold{
+            font-weight: 700;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .semi_bold{
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .resume{
+            width: 800px;
+            height: auto;
+            display: flex;
+            margin: 50px auto;
+        }
+
+        .resume .resume_left{
+            width: 280px;
+            background: #0bb5f4;
+        }
+
+        .resume .resume_left .resume_profile{
+            width: 100%;
+            height: 280px;
+        }
+
+        .resume .resume_left .resume_profile img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .resume .resume_left .resume_content{
+            padding: 0 25px;
+
+        }
+
+        .resume .title{
+            margin-bottom: 20px;
+        }
+
+        .resume .resume_left .bold{
+            color: #fff;
+        }
+
+        .resume .resume_left .semi_bold{
+            color: #f2f7f8;
+        }
+
+        .resume .resume_item{
+            padding: 25px 0;
+            border-bottom: 2px solid #b1eaff;
+        }
+
+        .resume .resume_left .resume_item:last-child{
+            border-bottom: 0;
+        }
+
+        .resume .resume_left ul li{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .resume .resume_left ul li:last-child{
+            border-bottom: 0;
+        }
+
+        .resume .resume_left ul li .icon{
+            width: 35px;
+            height: 35px;
+            background: #fff;
+            color: #0bb5f4;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .resume .icon i,
+        .resume .resume_rigth .resume_hobbys ul li i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        } 
+
+        .resume .resume_left ul li .data{
+            color: #f2f7f8;
+        }
+
+        .resume .resume_left .resume_skill ul li{
+            color: #f2f7f8;
+
+        }
+
+        .resume .resume_left .resume_skill ul li .skill_name{
+            width: 25%;
+            font-size: 18px;
+        }
+
+        .resume .resume_left .resume_skill ul li .skill_progress{
+            width: 60%;
+            margin: 0 5px;
+            height: 5px;
+            background: #009fd9;
+            position: relative;
+        }
+
+        .resume .resume_left .resume_skill ul li .skill_per{
+            width: 15%;
+        }
+
+        .resume .resume_left .resume_skill ul li .skill_progress span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #fff;
+        }
+
+        .resume .resume_rigth{
+            width: 520px;
+            background: #fff;
+            padding: 20px;
+        }
+
+        .resume .resume_rigth .bold{
+            color: #0bb5f4;
+        }
+
+        .resume .resume_rigth .resume_work ul, 
+        .resume .resume_rigth .resume_education ul{
+            padding-left: 40px;
+            overflow: hidden;
+        }
+
+        .resume .resume_rigth ul li{
+            position: relative;
+        }
+
+        .resume .resume_rigth ul li .date{
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .resume .resume_rigth ul li .info{
+            margin-bottom: 20px;
+        }
+
+        .resume .resume_rigth ul li:last-child .info{
+            margin-bottom: 0;
+        }
+
+        .resume .resume_rigth .resume_work ul li:before, 
+        .resume .resume_rigth .resume_education ul li:before{
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -25px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            border: 2px solid #0bb5f4;
+        }
+
+
+        .resume .resume_rigth .resume_work ul li:after, 
+        .resume .resume_rigth .resume_education ul li:after{
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: -21px;
+            width: 2px;
+            height: 115px;
+            background: #0bb5f4;
+        }
+
+        .resume .resume_rigth .resume_hobbys ul{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .resume .resume_rigth .resume_hobbys ul li{
+            width: 80px;
+            height: 80px;
+            border: 2px solid #0bb5f4;
+            border-radius: 50%;
+            position: relative;
+            color: #0bb5f4;
+        }
+
+
+        .resume .resume_rigth .resume_hobbys ul li i{
+            font-size: 30px;
+        }
+
+        .resume .resume_rigth .resume_hobbys ul li:before{
+            content: "";
+            position: absolute;
+            top: 40px;
+            right: -52px;
+            width: 50px;
+            height: 2px;
+            background: #0bb5f4;
+        }
+
+        .resume .resume_rigth .resume_hobbys ul li:last-child:before{
+            display: none;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+    <div class="resume">
+        <div class="resume_left">
+            <div class="resume_profile">
+                <a href="https://www.linkedin.com/in/jhoanna-castellanos"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQFzt-7qkhlA6Q/profile-displayphoto-shrink_400_400/0?e=1601510400&v=beta&t=rYS0MxMgFr2cBO7roumBm8nh-fEjbEjZvVkkopztFpc" alt="profile_pic"></a>
+
+            </div>
+            <div class="resume_content">
+                <div class="resume_item resume_info">
+                    <div class="title">
+                        <p class="bold">Jhoanna Castellanos</p>
+                        <p class="semi_bold">Desarrolladora FullStack</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                            </div>
+                            <div class="data">
+                                +58 91121681544
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                            </div>
+                            <div class="data">
+                                +58 91543728096
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="data">
+                                jhoacrossi1304@gmail.com
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-map-signs" aria-hidden="true"></i>
+                            </div>
+                            <div class="data">
+                                CABA <br> Argentina
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="resume_item resume_skill">
+                    <div class="title">
+                        <p class="bold">Skill´s</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="skill_name">
+                                <i class="fab fa-java" aria-hidden="true">&nbsp;JAVA</i>
+                                
+                            </div>
+                            
+                        </li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li>
+                            <div class="skill_name">
+                                <i class="fab fa-html5" aria-hidden="true">&nbsp;HTML</i>
+                                
+                            </div>
+                            
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="skill_name">
+                                <i class="fab fa-css3" aria-hidden="true">&nbsp;CSS</i>
+                                
+                            </div>
+                            
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="skill_name">
+                                <i class="fab fa-js" aria-hidden="true">&nbsp;JS</i>
+                                
+                            </div>
+                            
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="skill_name">
+                                SPRING
+                            </div>
+                            
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="skill_name">
+                                SQL
+                            </div>
+                           
+                        </li>
+                    </ul>
+                </div>
+                <div class="resume_item resume_social">
+                    <div class="title">
+                        <p class="bold">Social</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </div>
+                            <div class="data">
+                                <p class="semi_bold">
+                                    Linkedin
+                                </p>
+                                <a href="https://www.linkedin.com/in/jhoanna-castellanos">
+                                <p>jhoanna-castellanos</p></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fab fa-instagram-square" aria-hidden="true"></i>
+                            </div>
+                            <div class="data">
+                                <p class="semi_bold">
+                                    Instagram
+                                </p>
+                                <a href="https://www.instagram.com/jhoacrossi/">
+                                <p>@jhoacrossi</p></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                            </div>
+                            <div class="data">
+                                <p class="semi_bold">
+                                    Facebook
+                                </p>
+                                <a href="https://www.facebook.com/jhoanna.castellanosrossi/">
+                                <p>@jhoanna.castellanosrossi</p></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                            </div>
+                            <div class="data">
+                                <p class="semi_bold">
+                                    Twitter
+                                </p>
+                                <a href="https://twitter.com/JhoaRossi">
+                                <p>@jhoacrossi</p></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="resume_rigth">
+            <div class="resume_item resume_about">
+                <div class="title">
+                    <p class="bold">About Me</p>
+                </div>
+                <p>Me interesa integrarme a una empresa donde pueda obtener nuevos conocimientos, reforzar los que ya poseo y contribuir a los logros de los objetivos y metas que sean planteadas. </p>
+                <p>Programar es una pasión desde que descubrí que es lo que me gusta hacer.</p>
+            </div>
+            <div class="resume_item resume_work">
+                <div class="title">
+                    <p class="bold">Work Experience</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="date">2018-2020</div>
+                        <div class="info">
+                            <p class="semi_bold">Limia 99, S.A.</p>
+                            <p>Backend Developer</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">2016-2018</div>
+                        <div class="info">
+                            <p class="semi_bold">Libreria Mercado de la Oficina</p>
+                            <p>Fronted Developer</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="resume_item resume_education">
+                <div class="title">
+                    <p class="bold">Education</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="date">2013-2016</div>
+                        <div class="info">
+                            <p class="semi_bold">Ingeniería Informática (U. C. "Lisandro Alvarado")</p>
+                        </div>
+                    </li>
+                </ul>                
+            </div>
+            <div class="resume_item resume_education">
+                <div class="title">
+                    <p class="bold">Courses</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Introduccion al Desarrollo Web I y II</p>
+                            <a href href="https://learndigital.withgoogle.com/activate/courses"><p>Google</p></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">HTML5, CSS3, JAVASCRIPT</p>
+                            <a href="https://ed.team/"><p>EDteam</p></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Master Completo en Java SE y EE</p>
+                            <p>Andrés José Guzman</p>
+                            <a href="https://www.udemy.com/"><p>Udemy</p></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Git, GitHub y GitLab</p>
+                            <p>Yoiner Asprilla</p>
+                            <a href="https://www.udemy.com/"><p>Udemy</p></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Desarrollo Web con Spring Framework</p>
+                            <p>Miguel Angel Martín</p>
+                            <a href="https://www.udemy.com/"><p>Udemy</p></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Ingles Técnico para Programadores</p>
+                            <p>Polotics Misiones</p>
+                            <a href="https://polotic.misiones.gob.ar/capacitate/"><p>PoloTics</p></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Java FullStack Developer</p>
+                            <p>Polotics Misiones</p>
+                            <a href="https://polotic.misiones.gob.ar/capacitate/"><p>PoloTics</p></a>
+                        </div>
+                    </li>
+                </ul>                
+            </div>
+                       
+        </div>
+    </div>
+</body>
+</html>
